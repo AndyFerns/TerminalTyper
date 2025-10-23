@@ -44,13 +44,13 @@ def acc_calculator(prompt_text: str, user_text: str) -> float:
     """
     correct = 0
     # iterate through the shorter string (between prompt and user)
-    for i in range(min((len(prompt_text), len(user_text)))):
+    for i in range(min(len(prompt_text), len(user_text))):
         if user_text[i] == prompt_text[i]:
             correct += 1
         
     # Avoid division by 0 (edgecase)
     if len(user_text) == 0:
-        return 0.00
+        return 100.0
     
     accuracy = (correct / len(user_text)) * 100
     return accuracy
