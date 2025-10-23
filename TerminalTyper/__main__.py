@@ -5,7 +5,7 @@ def countdown():
     """
     Displays a 3-second countdown timer.
     """
-    input("Press Enter when you are ready to start...")
+    input("\nPress Enter when you are ready to start...")
     
     for i in range(3, 0, -1):
         print(f"\rStarting in {i}...", end="", flush=True)
@@ -29,7 +29,7 @@ def main():
     
     # Test loop
     start_time = time.time()
-    user_input = input("Start typing: ")
+    user_input = input("Start typing: \n")
     end_time = time.time()
     
     # Result calc
