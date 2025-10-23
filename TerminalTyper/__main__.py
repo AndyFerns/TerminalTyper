@@ -1,6 +1,18 @@
 import time
 from core import WORDS, generate_prompt, acc_calculator, wpm_calculator
 
+def countdown():
+    """
+    Displays a 3-second countdown timer.
+    """
+    input("Press Enter when you are ready to start...")
+    
+    for i in range(3, 0, -1):
+        print(f"\rStarting in {i}...", end="", flush=True)
+        time.sleep(1) # Wait for one second
+        
+    print("\rSTART!\t")
+
 def main():
     """
     Main function for core logic
@@ -11,8 +23,9 @@ def main():
     print("\n--- Terminal Typer Test ---")
     print("\nType the following text:")
     print(f"{prompt}")
-    print("\nPress ENTER when you are ready to start...\n")
-    input()
+    
+    # add countdown before test start
+    countdown()
     
     # Test loop
     start_time = time.time()
